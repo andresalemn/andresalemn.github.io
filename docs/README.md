@@ -5,6 +5,7 @@ These guides cover the `al-folio` v1.x starter and its pluginized runtime.
 ## User Guides
 
 - [Quick Start](QUICKSTART.md): create a site from the template and get it live quickly.
+- [Beginner's Customization Guide](BEGINNER_GUIDE.md): safe directories to edit, local testing steps, and deployment workflow.
 - [Installing and Deploying](INSTALL.md): Docker, local setup, GitHub Pages, Netlify, and upgrade guidance.
 - [Customizing](CUSTOMIZE.md): content, CVs, publications, layouts, local overrides, and feature configuration.
 - [FAQ](FAQ.md): common deployment, upgrade, plugin, and troubleshooting questions.

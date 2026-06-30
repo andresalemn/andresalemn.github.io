@@ -379,6 +379,7 @@ Comprehensive guides for all aspects of your al-folio website:
 
 - **[Documentation index](docs/README.md)** – All user, maintainer, and migration guides
 - **[Quick Start](docs/QUICKSTART.md)** – Get running in 5 minutes
+- **[Beginner's Customization Guide](docs/BEGINNER_GUIDE.md)** – Safe directories to edit, local testing, and git/deployment workflow (for beginners)
 - **[Installation & Deployment](docs/INSTALL.md)** – Set up your site on GitHub Pages or other platforms
 - **[Customization Guide](docs/CUSTOMIZE.md)** – Personalize your website (CVs, publications, themes, etc.)
 - **[Troubleshooting](docs/TROUBLESHOOTING.md)** – Fix common issues (deployment, build, styling, content)

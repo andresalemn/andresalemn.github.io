@@ -220,6 +220,7 @@ exclude:
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
+  - BEGINNER_GUIDE.md
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
