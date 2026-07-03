@@ -64,11 +64,19 @@ Testing locally ensures your changes don't crash the build before updating the l
 
 ### Step 3: Run Linters & Checks (Optional but Recommended)
 
-Before committing, format your code to keep it clean and standard. Run:
+Before committing, check and format your code to keep it clean and standard. Since the repository has an automated GitHub Actions check that verifies formatting on every push, running these commands prevents your deployment pipeline from failing due to style checks.
 
-```bash
-npm run lint:prettier
-```
+1. **Check formatting** to see if any files have style issues:
+   ```bash
+   npm run lint:prettier
+   ```
+2. **Automatically fix formatting** across all files:
+   ```bash
+   npx prettier . --write
+   ```
+
+> [!NOTE]
+> **Developer Formatting Preference:** You should run the Prettier format commands yourself in your terminal. AI coding agents should not run the formatting commands for you, but they should remind you to do so before committing.
 
 If you intentionally created local overrides of theme-packaged layout components, audit them using:
 
