@@ -7,7 +7,7 @@ first_name: Luis
 middle_name: Andrés
 last_name: Alemán Sánchez
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Let's connect over LinkedIn, and you're welcome to take a look at my Letterboxd!.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -246,7 +246,6 @@ exclude:
   - _pages/blog.md
   - _news/
   - _pages/news.md
-  - _bibliography
   - _pages/publications.md
   - _teachings/
   - _pages/teaching.md
