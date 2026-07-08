@@ -156,3 +156,36 @@ The settings inside `_config.yml` define which files are ignored when Jekyll com
 - **Testing & Operations:** `test/`, `lighthouse_results/`, `bin/`.
 - **Dependencies & Styling Config:** `Gemfile`, `Gemfile.lock`, `package.json`, `package-lock.json`, `node_modules/`, `vendor/`, `purgecss.config.js`.
 - **Assets & Previews:** `readme_preview/`, `robots.txt`.
+
+---
+
+## 5. Troubleshooting Permission & Dev Container Errors
+
+If you run Docker commands directly from your host WSL/Linux terminal (e.g. `docker compose up`), Docker runs as `root` by default and can create files in your workspace that are owned by `root`.
+
+When you later open the repository in a VS Code Dev Container (which runs as the non-root `vscode` user), the container startup will fail with permission errors, such as:
+
+> `Permission denied @ rb_sysopen - /workspaces/.../Gemfile.lock` (or `.jekyll-cache/...`)
+
+### How to Fix
+
+Run these commands in your host WSL/Linux terminal (from the repository root) to reset file ownership:
+
+1. **Find any root-owned files**:
+
+   ```bash
+   find . -user root
+   ```
+
+2. **Fix `Gemfile.lock` ownership**:
+   If `Gemfile.lock` is root-owned, delete it and restore it using Git. This recreates the file under your own user:
+
+   ```bash
+   rm -f Gemfile.lock && git restore Gemfile.lock
+   ```
+
+3. **Fix `.jekyll-cache` ownership**:
+   Since `.jekyll-cache` directories might be locked down by root, delete them using a temporary root-privileged container:
+   ```bash
+   docker run --rm -v "$(pwd):/src" -w /src alpine rm -rf .jekyll-cache
+   ```
