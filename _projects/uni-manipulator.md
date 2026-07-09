@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: 3DOF Robotic Manipulator
+description: Kinematic Modeling & Real-Time Control
+img: assets/img/uni-manipulator/cover.jpg
 importance: 3
-category: fun
+category: robotics
 ---
 
 <!-- <div style="zoom:0.5; margin:2rem auto;">

@@ -4,7 +4,7 @@ title: Prometheus 3.0
 description: Torque-controlled humanoid robot for immersive teleoperation
 img: assets/img/pr3/cover.jpg
 importance: 1
-category: work
+category: robotics
 ---
 
 Prometheus 3.0 is a **20-DOF humanoid research platform** developed for immersive telepresence using an **Avatar–Hermes** architecture. The system allows a human operator wearing the Hermes motion-capture suit to control the humanoid's upper body in real time.
@@ -71,6 +71,8 @@ Wireless UDP communication with the Hermes suit.
 
 The system converted IMU quaternion measurements into Cartesian end-effector targets for the Avatar robot.
 
+{% comment %}
+
 <div class="row justify-content-center">
     <div class="col-md-9 mt-3">
         {% include figure.liquid
@@ -84,6 +86,8 @@ The system converted IMU quaternion measurements into Cartesian end-effector tar
 <div class="caption">
     Four-layer software architecture separating hardware, control, kinematics, and teleoperation.
 </div>
+
+{% endcomment %}
 
 ---
 
