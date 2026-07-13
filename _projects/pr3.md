@@ -7,6 +7,13 @@ importance: 1
 category: robotics
 ---
 
+<div class="text-center my-4">
+  {% include video.liquid
+      path="https://www.youtube.com/embed/8kgJJjUeWsM"
+      class="img-fluid rounded z-depth-1"
+  %}
+</div>
+
 Prometheus 3.0 is a **20-DOF humanoid research platform** developed for immersive telepresence using an **Avatar–Hermes** architecture. The system allows a human operator wearing the Hermes motion-capture suit to control the humanoid's upper body in real time.
 
 My contribution focused on developing the complete control stack, from multibody dynamics and inverse kinematics to embedded firmware running on distributed microcontrollers.
@@ -178,9 +185,3 @@ To validate kinematic accuracy, I designed custom **3D-printed PLA metrology fix
 - Embedded Control
 
 ---
-
-## Demonstration
-
-> **Video:** Real-time teleoperation, calibration, and torque-controlled motion.
-
-_(Embedded video placeholder)_
