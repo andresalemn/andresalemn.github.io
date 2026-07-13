@@ -1,189 +1,121 @@
+design:
+  theme: sb2nov
+  page:
+    size: a4
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
-  image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
-
-  social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
-    - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+  name: "Luis Andrés Alemán Sánchez"
+  headline: Robotics Software Engineer | Embedded Systems | R&D
+  location: León, GTO, México
+  email: "andresaleman142@gmail.com"
+  website: "https://andresalemn.github.io"
 
   sections:
-    Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
-
+    Summary:
+      - |
+        Mechatronics Engineer with professional experience developing embedded
+        and robotics software for humanoid and mobile robotic systems.
+        Specialized in C/C++, ROS 2, real-time control, CANopen communication,
+        sensor integration, and system debugging. Experienced in firmware
+        development on Teensy and ESP32 microcontrollers, inverse kinematics,
+        industrial automation, PLC programming, and electrical integration.
+        Strong hands-on background spanning low-level control, hardware
+        bring-up, robotic prototyping, and software-hardware integration. Fluent
+        in Spanish and professionally proficient in English (C1)
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: "Inbiodroid"
+        position: "Junior Robotics & Control Engineer"
+        location: "León, Guanajuato, Mexico"
+        start_date: "2024-05"
+        end_date: "present"
         highlights:
-          - Relativity
-          - Description 2.
-
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
+          - Developed torque-based joint position controllers in C++ for
+            multiple subsystems of a 20-DOF humanoid robot, achieving
+            sub-millimeter (below 1 mm) positioning accuracy using encoder feedback
+            and custom control algorithms.
+          - Implemented embedded firmware on Teensy 4.1 microcontrollers and
+            integrated distributed motion-control nodes over the CANopen
+            protocol.
+          - >
+            Designed and tested real-time teleoperation functionality by
+            integrating IMU sensors, inverse kinematics, and UDP-based
+            communication between robotic subsystems.
+          - Performed system integration, debugging, calibration, and validation
+            of robotic hardware and software components during prototype
+            development.
+          - Developed PLC control logic with Siemens LOGO!, created electrical
+            schematics in SolidWorks Electrical, and designed pneumatic circuits
+            in FluidSIM for industrial automation projects.
     Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+      - name: "[3-DOF DC Motor Manipulator](https://andresalemn.github.io/projects/uni-manipulator.html)"
+        summary: "University Project"
         highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+          - Designed and implemented embedded motor-control firmware in C++ for
+            a 3-DOF robotic manipulator.
+          - Integrated quadrature encoders and tuned PID controllers to achieve
+            ±1 mm positioning accuracy.
+          - Developed a serial communication interface between the embedded
+            controller and a Python application for monitoring and control.
+      - name: "[Alexa-Controlled Robot (ROS 2 + Flask)](https://andresalemn.github.io/projects/aurduino-bot.html)"
+        summary: "Personal Project"
+        highlights:
+          - Developed a ROS 2-based robotic control system integrating Amazon
+            Alexa voice commands through a Flask web service and secure
+            tunneling.
+          - Implemented ROS 2 nodes, lifecycle management, and ros2_control
+            interfaces for real-time servo actuation and state feedback.
+          - Designed APIs and communication pipelines between cloud services and
+            physical robotic hardware.
+      - name: "Blind Spot Detection System"
+        summary: "Bachelor's Capstone Project"
+        highlights:
+          - Developed a Raspberry Pi driver-assistance prototype using Python,
+            OpenCV, and ultrasonic sensing.
+          - Implemented signal-processing and digital-filtering techniques to
+            improve obstacle-detection robustness and reduce sensor noise.
+          - Integrated computer-vision and distance-sensing modules into a
+            single embedded application.
+    skills:
+      - label: "Programming"
+        details: C, C++, Python, MATLAB
+      - label: Robotics Software
+        details: ROS 2, ros2_control, RViz, TF2, URDF, MoveIt, Gazebo, CoppeliaSim, Peter Corke Robotics Toolbox
+      - label: "Embedded Systems"
+        details: Teensy, ESP32, Arduino, Raspberry Pi, Firmware Development, Real-Time Systems, CANopen, UART, SPI, I²C, UDP, Serial Communication
+      - label: Control & Modeling
+        details: PID Control, Kinematics, Dynamics, Inverse Kinematics, System Modeling, MATLAB/Simulink
+      - label: "Industrial Robotics"
+        details: "ABB, FANUC, Universal Robots, Mitsubishi"
+      - label: "Industrial Automation"
+        details: Siemens LOGO!, CODESYS, SolidWorks Electrical, FluidSIM, Electrical Schematics, Pneumatic Systems
+      - label: Tools
+        details: Git, GitHub, Docker, Linux (Ubuntu), VS Code, PlatformIO, LaTeX
+      - label: "Languages"
+        details: Spanish (Native), English (C1), Finnish (A2)
+    Education:
+      - institution: "Universidad Anáhuac Mayab"
+        area: "Mechatronics Engineering"
+        degree: "BS"
+        location: "Mérida, Yucatán, Mexico"
+        start_date: "2019-09"
+        end_date: "2023-12"
+      - institution: "Universidad Anáhuac Mayab"
+        area: "Cultural Management"
+        degree: "Diploma"
+        location: "Mérida, Yucatán, Mexico"
+        start_date: "2020-01"
+        end_date: "2023-05"
+        summary: "Completed undergraduate coursework in the Culmen Leadership and Excellence in Arts & Culture Program."
+    Certificates:
+      - name: "Industrial Robotics Manufacturing Systems Integrator"
+        issuer: "Ministry of Economy"
+        date: "2026-07"
+        highlights:
+          - "Programming and integration of ABB, FANUC, Universal Robots, and Mitsubishi robotic systems."
+          - "Commissioning, troubleshooting, and validation of robotic cells."
+          - "Application of industrial safety procedures and standards."
+    Complementary Education:
+      - bullet: "**Professional Development**: Specialized courses in ROS 2, MoveIt, Modern Robotics, Collaborative Robotics in Industry, Operating Systems, and Computer Networks (Coursera, Udemy, edX). Motion Planning — Invited participant in a graduate-level course at CIMAT (2026)."
+      - bullet: "**International Experience**: Selected to participate in academic exchange programs in Finland (2017–2018) and Canada (2022)."
+  social_networks:
+    - network: LinkedIn
+      username: andresalemn

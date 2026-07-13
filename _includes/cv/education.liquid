@@ -1,0 +1,42 @@
+{% comment %}
+  Unified education entry renderer.
+  RenderCV fields: institution, area, degree, location, start_date, end_date, summary
+  JSONResume fields: institution, area, studyType, startDate, endDate
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div class="d-flex justify-content-between align-items-baseline flex-wrap">
+        <div>
+          <strong>{{ entry.institution }}</strong>
+          {% assign degree_type = entry.degree | default: entry.studyType %}
+          {% if degree_type or entry.area %}
+            &mdash;
+            <em>
+              {{ degree_type -}}
+              {%- if degree_type and entry.area %} in {% endif -%}
+              {{- entry.area }}
+            </em>
+          {% endif %}
+        </div>
+        <span class="text-muted" style="font-size: 0.85rem; white-space: nowrap;">
+          {% assign start = entry.start_date | default: entry.startDate %}
+          {% assign end = entry.end_date | default: entry.endDate %}
+          {% if start -%}
+            {{- start -}}
+            {%- if end %} – {{ end }}{% endif -%}
+          {%- endif %}
+        </span>
+      </div>
+      {% if entry.location %}
+        <div class="text-muted" style="font-size: 0.85rem;">{{ entry.location }}</div>
+      {% endif %}
+      {% if entry.summary %}
+        <p class="mt-1 mb-0 font-weight-light text-muted" style="font-size: 0.9rem;">
+          {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

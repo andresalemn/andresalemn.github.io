@@ -1,0 +1,52 @@
+{% comment %}
+  Unified experience entry renderer.
+  RenderCV fields: company, position, location, start_date, end_date, highlights
+  JSONResume fields: name, position, url, startDate, endDate, summary, highlights
+{% endcomment %}
+
+<div class="card-text font-weight-light">
+  {% for entry in entries %}
+    <div class="{% unless forloop.last %}mb-3{% endunless %}">
+      <div class="d-flex justify-content-between align-items-baseline flex-wrap">
+        <div>
+          {% assign company_name = entry.company | default: entry.name %}
+          {% if entry.url %}
+            <strong
+              ><a href="{{ entry.url }}" target="_blank">{{ company_name }}</a></strong
+            >
+          {% else %}
+            <strong>{{ company_name }}</strong>
+          {% endif %}
+          {% if entry.position %}
+            &mdash; <em>{{ entry.position }}</em>
+          {% endif %}
+        </div>
+        <span class="text-muted" style="font-size: 0.85rem; white-space: nowrap;">
+          {% assign start = entry.start_date | default: entry.startDate %}
+          {% assign end = entry.end_date | default: entry.endDate %}
+          {% if start -%}
+            {{- start -}}
+            {%- if end %} – {{ end }}{% endif -%}
+          {%- endif %}
+        </span>
+      </div>
+      {% if entry.location %}
+        <div class="text-muted" style="font-size: 0.85rem;">{{ entry.location }}</div>
+      {% endif %}
+      {% if entry.summary %}
+        <p class="mt-1 mb-0" style="font-size: 0.9rem;">
+          {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+      {% if entry.highlights %}
+        <ul class="card-text font-weight-light list-group list-group-flush mt-1" style="border: none;">
+          {% for highlight in entry.highlights %}
+            <li class="list-group-item" style="padding-left: 15px; border: none; padding-top: 2px; padding-bottom: 2px;">
+              • {{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

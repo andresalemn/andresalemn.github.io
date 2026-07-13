@@ -1,0 +1,45 @@
+{% comment %}
+  Unified certificates entry renderer that supports name, issuer, date, summary, and highlights
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      {% if entry.icon %}
+        <i class="{{ entry.icon }}"></i>
+      {% endif %}
+      {% if entry.url %}
+        <strong
+          ><a href="{{ entry.url }}" target="_blank">{{ entry.name }}</a></strong
+        >
+      {% else %}
+        <strong>{{ entry.name }}</strong>
+      {% endif %}
+
+      {% if entry.issuer %}
+        - <em>{{ entry.issuer }}</em>
+      {% endif %}
+
+      {% if entry.date %}
+        {% assign date_parts = entry.date | split: '-' %}
+        ({{ date_parts[0] }})
+      {% endif %}
+
+      {% if entry.summary %}
+        <p class="mt-1 mb-0 font-weight-light text-muted" style="font-size: 0.9rem;">
+          {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+
+      {% if entry.highlights %}
+        <ul class="card-text font-weight-light list-group list-group-flush mt-2" style="border: none;">
+          {% for highlight in entry.highlights %}
+            <li class="list-group-item" style="padding-left: 15px; border: none; padding-top: 2px; padding-bottom: 2px;">
+              • {{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

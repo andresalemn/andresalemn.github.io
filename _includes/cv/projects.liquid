@@ -1,0 +1,40 @@
+{% comment %}
+  Unified projects entry renderer that supports name (with markdown link parsing), summary, dates, and highlights
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div class="d-flex justify-content-between align-items-baseline">
+        <h6 class="font-weight-bold" style="font-size: 0.95rem; margin-bottom: 0;">
+          {{ entry.name | markdownify | remove: '<p>' | remove: '</p>' }}
+        </h6>
+        {% if entry.start_date or entry.date %}
+          <span class="text-muted" style="font-size: 0.85rem;">
+            {% if entry.start_date %}
+              {{ entry.start_date }} - {% if entry.end_date %}{{ entry.end_date }}{% else %}Present{% endif %}
+            {% else %}
+              {{ entry.date }}
+            {% endif %}
+          </span>
+        {% endif %}
+      </div>
+
+      {% if entry.summary %}
+        <p class="font-weight-light text-muted mb-0" style="font-size: 0.9rem; margin-top: 2px;">
+          {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+
+      {% if entry.highlights %}
+        <ul class="card-text font-weight-light list-group list-group-flush mt-2" style="border: none;">
+          {% for highlight in entry.highlights %}
+            <li class="list-group-item" style="padding-left: 15px; border: none; padding-top: 2px; padding-bottom: 2px;">
+              • {{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

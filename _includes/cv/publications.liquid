@@ -1,0 +1,35 @@
+{% comment %}
+  Unified publications entry renderer.
+  JSONResume fields: name, publisher, releaseDate, url, summary
+  RenderCV-style fields: name, date, summary
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div class="d-flex justify-content-between align-items-baseline flex-wrap">
+        <div>
+          {% if entry.url %}
+            <strong
+              ><a href="{{ entry.url }}" target="_blank">{{ entry.name }}</a></strong
+            >
+          {% else %}
+            <strong>{{ entry.name }}</strong>
+          {% endif %}
+          {% if entry.publisher %}
+            &mdash; <em>{{ entry.publisher }}</em>
+          {% endif %}
+        </div>
+        {% assign pub_date = entry.releaseDate | default: entry.date %}
+        {% if pub_date %}
+          <span class="text-muted" style="font-size: 0.85rem;">{{ pub_date }}</span>
+        {% endif %}
+      </div>
+      {% if entry.summary %}
+        <p class="mt-1 mb-0 font-weight-light text-muted" style="font-size: 0.9rem;">
+          {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

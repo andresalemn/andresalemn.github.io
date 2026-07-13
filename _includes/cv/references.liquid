@@ -1,0 +1,23 @@
+{% comment %}
+  Unified references entry renderer.
+  JSONResume fields: name, reference
+  RenderCV-style fields: name, icon, reference
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div>
+        {% if entry.icon %}
+          <i class="{{ entry.icon }}"></i>
+        {% endif %}
+        <strong>{{ entry.name }}</strong>
+      </div>
+      {% if entry.reference %}
+        <p class="mt-1 mb-0 font-weight-light text-muted" style="font-size: 0.9rem;">
+          {{ entry.reference | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

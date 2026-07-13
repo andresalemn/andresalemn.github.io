@@ -1,0 +1,131 @@
+design:
+  theme: sb2nov
+  page:
+    size: a4
+cv:
+  name: "Luis Andrés Alemán Sánchez"
+  headline: Robotics Software Engineer | Embedded Systems | R&D
+  location: León, GTO, México
+  email: "andresaleman142@gmail.com"
+  website: "https://andresalemn.github.io"
+
+  sections:
+    Perfil Profesional:
+      - |
+        Ingeniero Mecatrónico con experiencia profesional en el desarrollo de
+        software embebido y robótico para sistemas robóticos humanoides y móviles.
+        Especializado en C/C++, ROS 2, control en tiempo real, comunicación CANopen,
+        integración de sensores y depuración de sistemas. Experiencia en desarrollo
+        de firmware para microcontroladores Teensy y ESP32, cinemática inversa,
+        automatización industrial, programación de PLC e integración eléctrica.
+        Amplia experiencia práctica en control de bajo nivel, puesta en marcha de
+        hardware, prototipado robótico e integración entre software y hardware.
+        Español nativo e inglés con dominio profesional (C1).
+
+    Experiencia:
+      - company: "Inbiodroid"
+        position: "Junior Robotics & Control Engineer"
+        location: "León, Guanajuato, Mexico"
+        start_date: "2024-05"
+        end_date: "present"
+        highlights:
+          - Desarrollé controladores de posición articular basados en torque en C++
+            para múltiples subsistemas de un robot humanoide de 20 grados de libertad,
+            logrando una precisión de posicionamiento submilimétrica (inferior a 1 mm)
+            mediante retroalimentación de encoders y algoritmos de control propios.
+          - Implementé firmware embebido en microcontroladores Teensy 4.1 e integré
+            nodos distribuidos de control de movimiento mediante el protocolo CANopen.
+          - >
+            Diseñé y probé funcionalidades de teleoperación en tiempo real mediante
+            la integración de sensores IMU, cinemática inversa y comunicación basada
+            en UDP entre subsistemas robóticos.
+          - Realicé integración de sistemas, depuración, calibración y validación
+            de componentes de hardware y software robótico durante el desarrollo
+            de prototipos.
+          - Desarrollé lógica de control PLC con Siemens LOGO!, elaboré diagramas
+            eléctricos en SolidWorks Electrical y diseñé circuitos neumáticos en
+            FluidSIM para proyectos de automatización industrial.
+
+    Proyectos:
+      - name: "[3-DOF DC Motor Manipulator](https://andresalemn.github.io/projects/uni-manipulator.html)"
+        summary: "University Project"
+        highlights:
+          - Diseñé e implementé firmware embebido de control de motores en C++
+            para un manipulador robótico de 3 grados de libertad.
+          - Integré encoders incrementales y ajusté controladores PID para lograr
+            una precisión de posicionamiento de ±1 mm.
+          - Desarrollé una interfaz de comunicación serial entre el controlador
+            embebido y una aplicación en Python para monitoreo y control.
+
+      - name: "[Alexa-Controlled Robot (ROS 2 + Flask)](https://andresalemn.github.io/projects/aurduino-bot.html)"
+        summary: "Personal Project"
+        highlights:
+          - Desarrollé un sistema de control robótico basado en ROS 2 integrando
+            comandos de voz de Amazon Alexa mediante un servicio web Flask y
+            comunicación segura mediante túneles.
+          - Implementé nodos ROS 2, gestión de ciclo de vida e interfaces
+            ros2_control para accionamiento de servos en tiempo real y
+            retroalimentación de estado.
+          - Diseñé APIs y flujos de comunicación entre servicios en la nube y
+            hardware robótico físico.
+
+      - name: "Blind Spot Detection System"
+        summary: "Bachelor's Capstone Project"
+        highlights:
+          - Desarrollé un prototipo de asistencia al conductor basado en Raspberry Pi
+            utilizando Python, OpenCV y sensores ultrasónicos.
+          - Implementé técnicas de procesamiento de señales y filtrado digital para
+            mejorar la robustez de detección de obstáculos y reducir ruido del sensor.
+          - Integré módulos de visión computacional y medición de distancia en una
+            aplicación embebida única.
+
+    skills:
+      - label: "Programming"
+        details: C, C++, Python, MATLAB
+      - label: Robotics Software
+        details: ROS 2, ros2_control, RViz, TF2, URDF, MoveIt, Gazebo, CoppeliaSim, Peter Corke Robotics Toolbox
+      - label: "Embedded Systems"
+        details: Teensy, ESP32, Arduino, Raspberry Pi, Firmware Development, Real-Time Systems, CANopen, UART, SPI, I2C, UDP, Serial Communication
+      - label: "Control and Modeling"
+        details: PID Control, Kinematics, Dynamics, Inverse Kinematics, System Modeling, MATLAB/Simulink
+      - label: "Industrial Robotics"
+        details: "ABB, FANUC, Universal Robots, Mitsubishi"
+      - label: "Industrial Automation"
+        details: Siemens LOGO!, CODESYS, SolidWorks Electrical, FluidSIM, Electrical Schematics, Pneumatic Systems
+      - label: Tools
+        details: Git, GitHub, Docker, Linux (Ubuntu), VS Code, PlatformIO, LaTeX
+      - label: "Languages"
+        details: Spanish (Native), English (C1), Finnish (A2)
+
+    Formación:
+      - institution: "Universidad Anáhuac Mayab"
+        area: "Mechatronics Engineering"
+        degree: "BS"
+        location: "Mérida, Yucatán, Mexico"
+        start_date: "2019-09"
+        end_date: "2023-12"
+
+      - institution: "Universidad Anáhuac Mayab"
+        area: "Cultural Management"
+        degree: "Diploma"
+        location: "Mérida, Yucatán, Mexico"
+        start_date: "2020-01"
+        end_date: "2023-05"
+        summary: "Completé cursos universitarios dentro del Programa de Liderazgo y Excelencia en Artes y Cultura Culmen."
+
+    Certificaciones:
+      - name: "Industrial Robotics Manufacturing Systems Integrator"
+        issuer: "Ministry of Economy"
+        date: "2026-07"
+        highlights:
+          - "Programación e integración de sistemas robóticos ABB, FANUC, Universal Robots y Mitsubishi."
+          - "Puesta en marcha, diagnóstico de fallas y validación de celdas robóticas."
+          - "Aplicación de procedimientos y estándares de seguridad industrial."
+
+    Educación Complementaria:
+      - bullet: "**Professional Development**: Cursos especializados en ROS 2, MoveIt, Robótica Moderna, Robótica Colaborativa en la Industria, Sistemas Operativos y Redes de Computadoras (Coursera, Udemy, edX). Planeación de Movimiento — Participante invitado en un curso de nivel posgrado en CIMAT (2026)."
+      - bullet: "**International Experience**: Seleccionado para participar en programas de intercambio académico en Finlandia (2017-2018) y Canadá (2022)."
+
+  social_networks:
+    - network: LinkedIn
+      username: andresalemn

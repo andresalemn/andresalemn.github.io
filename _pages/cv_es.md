@@ -1,14 +1,12 @@
 ---
 layout: cv
-permalink: /cv/
-title: CV
-nav: true
-nav_order: 5
-# cv_pdf: /assets/pdf/example_pdf.pdf # you can also use external links here
-cv_format: rendercv # options: rendercv, jsonresume
-cv_source: cv # load _data/cv.yml
+permalink: /cv/es/
+title: CV (Español)
+nav: false
+cv_format: rendercv
+cv_source: cv_es # load _data/cv_es.yml
 description: >
-  This is the web version of my CV in english.
+  Esta es la versión en español de mi CV.
   <style>
     .cv-pdf-btn {
       display: none !important;
@@ -37,11 +35,11 @@ description: >
     }
   </style>
   <div style='display: flex; gap: 10px; flex-wrap: wrap;'>
-    <a href='../assets/pdf/cv_english.pdf' target='_blank' rel='noopener noreferrer' class='cv-pdf-btn' title='Download PDF'>
-      <i class='fa-solid fa-file-pdf'></i> Download PDF
+    <a href='../../assets/pdf/cv_spanish.pdf' target='_blank' rel='noopener noreferrer' class='cv-pdf-btn' title='Descargar PDF'>
+      <i class='fa-solid fa-file-pdf'></i> Descargar PDF
     </a>
-    <a href='../cv/es/' class='cv-pdf-btn' title='Ver CV en Español (Web)'>
-      <i class='fa-solid fa-globe'></i> Edición en Español (Web)
+    <a href='../../cv/' class='cv-pdf-btn' title='View CV in English (Web)'>
+      <i class='fa-solid fa-globe'></i> English Edition (Web)
     </a>
   </div>
 toc:

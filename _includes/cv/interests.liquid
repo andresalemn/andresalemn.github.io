@@ -1,0 +1,20 @@
+{% comment %}
+  Unified interests entry renderer.
+  JSONResume fields: name, keywords (array)
+  RenderCV-style: name or plain string entries
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      {% if entry.name %}
+        <strong>{{ entry.name }}</strong>
+        {% if entry.keywords %}
+          <span class="text-muted"> — {{ entry.keywords | join: ', ' }}</span>
+        {% endif %}
+      {% else %}
+        {{ entry | markdownify | remove: '<p>' | remove: '</p>' }}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

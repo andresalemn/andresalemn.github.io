@@ -1,0 +1,21 @@
+{% comment %}
+  Unified skills entry renderer that supports both RenderCV (name, level, keywords) and custom/JSONResume (label, details) schemas
+{% endcomment %}
+
+<table class="table table-cv table-sm table-borderless">
+  {% for entry in entries %}
+    {% assign skill_name = entry.name | default: entry.label %}
+    {% assign skill_details = entry.keywords | default: entry.details %}
+    <tr>
+      <td class="p-1 pr-2 font-weight-bold" style="width: 25%;">
+        <b>{{ skill_name }}</b>
+      </td>
+      <td class="p-1 pl-2 font-weight-light">
+        {{ skill_details }}
+        {% if entry.level %}
+          <span class="text-muted">({{ entry.level }})</span>
+        {% endif %}
+      </td>
+    </tr>
+  {% endfor %}
+</table>

@@ -1,0 +1,18 @@
+{% comment %}
+  Unified language entry renderer.
+  JSONResume fields: language, fluency
+  RenderCV-style fields: name, level
+{% endcomment %}
+
+<table class="table table-cv table-sm table-borderless">
+  {% for entry in entries %}
+    {% assign lang_name = entry.language | default: entry.name %}
+    {% assign lang_level = entry.fluency | default: entry.level %}
+    <tr>
+      <td class="p-1 pr-2 font-weight-bold" style="width: 25%;">
+        <b>{{ lang_name }}</b>
+      </td>
+      <td class="p-1 pl-2 font-weight-light">{{ lang_level }}</td>
+    </tr>
+  {% endfor %}
+</table>

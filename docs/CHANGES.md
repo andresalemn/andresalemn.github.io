@@ -89,7 +89,51 @@ To prevent default templates and unused files from being compiled into the final
 
 ---
 
-## 5. Reference Commit Log
+## 5. CV Web Rendering System (Plugin Overrides)
+
+### Personal CV Data Migration (`_data/cv.yml`, `_data/cv_es.yml`)
+
+- **Files**: `_data/cv.yml`, `_data/cv_es.yml`
+- **Changes**:
+  - Replaced the Albert Einstein placeholder content in `_data/cv.yml` with real personal data: name, headline, location, email, website, Experience (Inbiodroid), Projects (3-DOF Manipulator, Alexa Robot, Blind Spot Detection), Skills, Education (Universidad Anáhuac Mayab — BS Mechatronics + Cultural Management Diploma), Certificates (Industrial Robotics Integrator), Complementary Education, and LinkedIn social link.
+  - Created `_data/cv_es.yml` as a full Spanish translation of the above.
+  - Both files use the RenderCV YAML schema (`design:` + `cv:` + `sections:` structure).
+
+### CV Page Updates (`_pages/cv.md`, `_pages/cv_es.md`)
+
+- **Files**: `_pages/cv.md`, `_pages/cv_es.md`
+- **Changes**:
+  - Added `cv_source: cv` frontmatter to `cv.md` to explicitly load `_data/cv.yml`.
+  - Updated download buttons: English page now links to `cv_english.pdf`; Spanish button replaced with a web link to `/cv/es/` (globe icon).
+  - Created `_pages/cv_es.md` at permalink `/cv/es/` with `cv_source: cv_es` to serve the Spanish web CV using the same layout. Includes a "Descargar PDF" button for `cv_spanish.pdf` and a back-link to the English web edition.
+
+### RenderCV Pipeline Disabled
+
+- **Files**: `.github/workflows/render-cv.yml`, `assets/rendercv/design.yaml`, `assets/rendercv/settings.yaml`
+- **Change**: Entire contents of all three files commented out to disable automatic PDF rendering via GitHub Actions. The CV PDFs (`cv_english.pdf`, `cv_spanish.pdf`) are managed manually in `assets/pdf/`.
+- **Deleted**: `assets/rendercv/locale.yaml`, `assets/rendercv/rendercv_output/Albert_Einstein_CV.pdf`, `assets/pdf/example_pdf.pdf`.
+
+### Plugin-Owned Include Overrides (`_includes/cv/`)
+
+> ⚠️ These files are owned by the `al_folio_core` plugin. Local overrides are tracked in `.al-folio-overrides.yml`.
+
+- **Modified**: `_includes/cv/render.liquid`
+  - Added Spanish section-name dispatch (`Formación`, `Experiencia`, `Certificaciones`, `Proyectos`, `Voluntariado`, `Idiomas`, `Intereses`, `Referencias`, `Publicaciones`, `Premios`) so both `cv.yml` and `cv_es.yml` route to the correct partial includes.
+  - Added plain-string fallback in the generic section renderer — fixes empty `Summary` / `Perfil Profesional` sections.
+  - Fixed a bug where the JSONResume `awards` block incorrectly included `cv/education.liquid` instead of `cv/awards.liquid`.
+
+- **Created** (new partials, not present in plugin):
+  - `_includes/cv/experience.liquid` — renders company, position, location, dates, highlights.
+  - `_includes/cv/education.liquid` — renders institution, degree, area, location, dates, summary.
+  - `_includes/cv/awards.liquid` — renders title/name, awarder/issuer, date, summary.
+  - `_includes/cv/publications.liquid` — renders name, publisher, date, url, summary.
+  - `_includes/cv/languages.liquid` — renders language name and fluency/level.
+  - `_includes/cv/interests.liquid` — renders name and keywords.
+  - `_includes/cv/references.liquid` — renders name, icon, reference text.
+
+---
+
+## 6. Reference Commit Log
 
 Below is the log of the initial commits where these changes were introduced:
 

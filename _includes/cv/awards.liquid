@@ -1,0 +1,29 @@
+{% comment %}
+  Unified awards entry renderer.
+  JSONResume fields: title, date, awarder, summary
+  RenderCV-style fields: name, date, issuer, summary
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div class="d-flex justify-content-between align-items-baseline flex-wrap">
+        <strong>{{ entry.title | default: entry.name }}</strong>
+        {% if entry.date %}
+          <span class="text-muted" style="font-size: 0.85rem;">{{ entry.date }}</span>
+        {% endif %}
+      </div>
+      {% assign awarder = entry.awarder | default: entry.issuer %}
+      {% if awarder %}
+        <div class="text-muted" style="font-size: 0.85rem;">
+          <em>{{ awarder }}</em>
+        </div>
+      {% endif %}
+      {% if entry.summary %}
+        <p class="mt-1 mb-0 font-weight-light" style="font-size: 0.9rem;">
+          {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
