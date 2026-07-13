@@ -1,0 +1,43 @@
+# for more options, see https://docs.rendercv.com/user_guide/yaml_input_structure/locale/
+locale:
+  language: es
+  phone_number_format: international
+
+  last_updated_date_template: "Última actualización en TODAY"
+
+  date_template: "MONTH_ABBREVIATION YEAR"
+
+  month: mes
+  months: meses
+  year: año
+  years: años
+  present: presente
+  to: "–"
+
+  abbreviations_for_months:
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sept
+    - oct
+    - nov
+    - dic
+
+  full_names_of_months:
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
