@@ -54,3 +54,4 @@ Docker note: v1 uses `/srv/jekyll/bin/entry_point.sh` and serves from container-
 - Do not add starter-local npm build scripts for theme/runtime assets.
 - Keep docs aligned with pluginized v1 ownership.
 - If you create or keep local overrides of plugin-owned files, run `bundle exec al-folio upgrade overrides audit` and commit `.al-folio-overrides.yml` after review.
+- **Prettier Reminder**: ALWAYS remind the user to run Prettier (`npm run lint:prettier` or `npx prettier --write .`) whenever they discuss committing changes, tagging commits, or wrapping up a feature.
