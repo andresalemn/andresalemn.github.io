@@ -15,6 +15,7 @@ mermaid:
 An end-to-end mechatronic system featuring a 3-Degree-of-Freedom (3-DOF) robotic arm engineered for spatial positioning and trajectory execution. Built as a capstone mechatronics engineering project, this platform integrates analytical kinematic mathematical modeling, high-frequency closed-loop firmware control, and a modern Python graphical user interface.
 
 {% if page.repo %}
+
 <div class="repositories d-flex justify-content-center my-4">
   {% include repository/repo.liquid repository=page.repo %}
 </div>
@@ -63,7 +64,7 @@ flowchart TD
         TP["Trajectory Planner\n(Parametric Waypoint Generator)"]
         KIN["Kinematic Engine\n(DH Matrices, Analytical IK & Jacobian)"]
         SER_PY["PySerial Interface\n(Command Formatting @ 115200 bps)"]
-        
+
         UI --> KIN
         UI --> TP
         TP --> KIN
@@ -80,7 +81,7 @@ flowchart TD
         PWM["PWM Motor Drivers"]
         BTN["Manual Push-Button Control\n(Auxiliary End-Effector Trigger)"]
         SERVO_LIB["Servo.h Driver"]
-        
+
         SER_ARD --> PID
         PID --> PWM
         BTN --> SERVO_LIB
@@ -90,7 +91,7 @@ flowchart TD
         MOTORS["3x DC Motors with Quadrature Encoders"]
         ROBOT["3-DOF Mechanical Linkage"]
         GRIPPER["Auxiliary Micro-Servo Gripper"]
-        
+
         PWM --> MOTORS
         MOTORS --> ROBOT
         MOTORS -.->|Encoder Feedback Interrupts| PID
@@ -183,6 +184,7 @@ The manipulator features 3 revolute joints. Spatial positioning of the end-effec
     \mathbf{z}_0 & \mathbf{z}_1 & \mathbf{z}_2
     \end{bmatrix}
     $$
+
   </div>
 </details>
 
@@ -225,4 +227,3 @@ The low-level controller handles interrupt-driven encoder decoding, state parsin
 - **Andrés Alemán** – Control Systems, Kinematic Modeling & Lead Software Development ([@andresalemn](https://github.com/andresalemn))
 - **Héctor Moore** – Mechanical Design, CAD Assembly & Physical Fabrication
 - **Ricardo Villanueva** – Power Electronics, Circuit Integration & Hardware Testing
-
