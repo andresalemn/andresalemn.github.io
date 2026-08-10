@@ -142,7 +142,11 @@ To prevent default templates and unused files from being compiled into the final
 
 Below is the log of recent customization and setup commits:
 
-- `be1da9c`: Fix changes with prettier tool.
+- `7d6f390`: Updating projects pages (Prometheus 3.0 overhaul and 3DOF design refinements).
+- `087620c`: Adding Prettier reminder and project design preferences to `AGENTS.md`.
+- `18606c2`: Prettier formatting fixes.
+- `dd9f8ef`: Updated style contract lint to allow tracked `_includes/` overrides alongside `.al-folio-overrides.yml`.
+- `be1da9c`: Prettier formatting fixes.
 - `75d75ef`: Updated 3DOF manipulator project page with architecture diagram, math accordion, and hardware gallery.
 - `0f6a12b`: About me page edited.
 - `9066d65`: Project entries small changes.
