@@ -68,7 +68,9 @@ for (const forbiddenPath of ["_layouts", "_sass", "_scripts", "assets/tailwind",
 }
 
 if (exists("_includes") && !exists(".al-folio-overrides.yml")) {
-  failures.push("Starter must not own core component path `_includes`; move ownership to corresponding gem or record overrides in `.al-folio-overrides.yml`.");
+  failures.push(
+    "Starter must not own core component path `_includes`; move ownership to corresponding gem or record overrides in `.al-folio-overrides.yml`."
+  );
 }
 
 for (const forbiddenGlobPath of [
