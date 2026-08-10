@@ -10,7 +10,7 @@
         TP["Trajectory Planner\n(Parametric Waypoint Generator)"]
         KIN["Kinematic Engine\n(DH Matrices, Analytical IK &amp; Jacobian)"]
         SER_PY["PySerial Interface\n(Command Formatting @ 115200 bps)"]
-        
+
         UI --&gt; KIN
         UI --&gt; TP
         TP --&gt; KIN
@@ -27,7 +27,7 @@
         PWM["PWM Motor Drivers"]
         BTN["Manual Push-Button Control\n(Auxiliary End-Effector Trigger)"]
         SERVO_LIB["Servo.h Driver"]
-        
+
         SER_ARD --&gt; PID
         PID --&gt; PWM
         BTN --&gt; SERVO_LIB
@@ -37,7 +37,7 @@
         MOTORS["3x DC Motors with Quadrature Encoders"]
         ROBOT["3-DOF Mechanical Linkage"]
         GRIPPER["Auxiliary Micro-Servo Gripper"]
-        
+
         PWM --&gt; MOTORS
         MOTORS --&gt; ROBOT
         MOTORS -.-&gt;|Encoder Feedback Interrupts| PID
