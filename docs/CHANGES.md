@@ -131,17 +131,31 @@ To prevent default templates and unused files from being compiled into the final
   - `_includes/cv/interests.liquid` — renders name and keywords.
   - `_includes/cv/references.liquid` — renders name, icon, reference text.
 
+### Style Contract Lint Adjustment (`test/style_contract.js`)
+
+- **File**: `test/style_contract.js`
+- **Change**: Updated the starter style contract assertion to permit the existence of the `_includes/` directory as long as `.al-folio-overrides.yml` exists. This allows local plugin overrides (such as custom CV render partials) without breaking CI lint tests.
+
 ---
 
 ## 6. Reference Commit Log
 
-Below is the log of the initial commits where these changes were introduced:
+Below is the log of recent customization and setup commits:
 
+- `be1da9c`: Fix changes with prettier tool.
+- `75d75ef`: Updated 3DOF manipulator project page with architecture diagram, math accordion, and hardware gallery.
+- `0f6a12b`: About me page edited.
+- `9066d65`: Project entries small changes.
+- `90c9f96`: Quick configuration changes.
+- `672dec4`: Added bilingual web CV rendering with RenderCV YAML data.
+- `f270c72`: Updated `unit-tests.yml` integration workflows.
+- `b1c212c`: Added initial customization log to `docs/CHANGES.md`.
 - `828789d`: Custom English/Spanish CV download buttons in `cv.md` and disabled comments/distill integration tests.
 - `4d98b6b`: Customized repositories page with personal Vercel app stats and selected repositories.
 - `6030239`: Cleared default project templates and added custom project pages/covers.
 - `d32a4a1`: Edited footer text (removed Unsplash credit).
 - `e34f622`: Configured the first custom project page (`pr3.md`).
-- `234c8a1`: Added social links, edited socials configuration, and removed `_bibliography` from excludes list.
+- `19bf83d`: Added troubleshooting guide for dev container error.
+- `234c87a`: Changes in social links and minor tweaks.
 - `9dbf25d`: Main customization commit that disabled blog, newsletter, news, teachings, books collections, dropdown menu, profiles, and added excludes.
 - `719dd56`: Added `.nojekyll` file to bypass GitHub Pages default Jekyll pipeline.
