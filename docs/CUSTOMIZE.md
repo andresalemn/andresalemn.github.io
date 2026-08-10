@@ -441,6 +441,29 @@ Note that `posts` is also a collection, but it is a default collection created a
 
 You can create new projects by adding new Markdown files in the [\_projects](../_projects/) directory. The easiest way to do this is to copy an existing project and modify it.
 
+### Project Page Design Guidelines & Preferences
+
+When designing project write-ups in `_projects/`, use a modular, visually engaging approach tailored to the specific project domain (e.g., robotics, software, AI, mechanical design). Not all projects require the exact same sections, but agents and contributors should draw from these established building-block preferences:
+
+1. **Structure Confirmation**:
+   - **Always ask the user for confirmation** on the proposed section outline before populating or rewriting a project page, adapting the layout to fit that project's unique highlights.
+
+2. **Frontmatter Configuration**:
+   - Enable Mermaid support when diagrams are needed by setting `mermaid: enabled: true` in the frontmatter.
+   - Specify `repo: username/repository` if an open-source repository exists to display the automatic GitHub repo card.
+
+3. **Recommended Structural Building Blocks (Examples)**:
+   - **📌 Overview & Key Highlights**: Concise summary, repo card, showcase media (video embeds or metrics badge), and a card container listing core achievements.
+   - **🏗️ Architecture & Subsystems**: High-level workflow featuring an interactive **Mermaid flowchart** (`flowchart TD`) for multi-tier systems (e.g. Host $\rightarrow$ Bus $\rightarrow$ Firmware $\rightarrow$ Hardware).
+   - **📐 Math & Theoretical Modeling (Collapsible Accordion)**: Wrap complex mathematical derivations, kinematic equations, or algorithms inside a `<details><summary>` expandable accordion (`📖 Click to expand...`) to keep the page clean while preserving technical depth.
+   - **⚡ Implementation & Trade-Offs**: Deep dives into firmware, software logic, or mechanical designs, paired with hardware image galleries and explicit **Engineering Trade-Off** callout boxes.
+   - **🏆 Results & Validation**: Empirical outcomes, repeatability benchmarks, metrology calibration, or performance metrics.
+   - **👥 Team & Stack**: Role attribution and color-coded technology badge grids (`<span class="badge badge-pill ...">`).
+
+4. **Visual Dividers & Spacing**:
+   - Avoid plain markdown `---` dividers; use semi-transparent gradient dividers (`<hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent); margin: 3.5rem 0;">`).
+   - Maintain generous vertical spacing (`mb-5`, `my-4`, `mt-5`) between headings, image captions, and containers to avoid visual clutter.
+
 ## Adding some news
 
 You can add news in the about page by adding new Markdown files in the [\_news](../_news/) directory. There are currently two types of news: inline news and news with a link. News with a link take you to a new page while inline news are displayed directly in the about page. The easiest way to create yours is to copy an existing news and modify it.

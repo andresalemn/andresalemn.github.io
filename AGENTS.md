@@ -55,3 +55,4 @@ Docker note: v1 uses `/srv/jekyll/bin/entry_point.sh` and serves from container-
 - Keep docs aligned with pluginized v1 ownership.
 - If you create or keep local overrides of plugin-owned files, run `bundle exec al-folio upgrade overrides audit` and commit `.al-folio-overrides.yml` after review.
 - **Prettier Reminder**: ALWAYS remind the user to run Prettier (`npm run lint:prettier` or `npx prettier --write .`) whenever they discuss committing changes, tagging commits, or wrapping up a feature.
+- **Project Page Design Preferences**: Follow the modular design preferences for `_projects/` pages in `docs/CUSTOMIZE.md#project-page-design-guidelines--preferences`. ALWAYS propose and confirm the section structure with the user before editing or populating a project page. Use building-block design elements (Mermaid flowcharts, `<details>` math accordions, card containers, gradient `<hr>` dividers, and technology badge grids) as appropriate for that project.
