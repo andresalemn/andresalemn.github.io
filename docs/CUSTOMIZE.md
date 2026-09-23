@@ -388,6 +388,44 @@ This will add a download button on your CV page that links to the PDF. (The exac
 
 Delete or comment out the [`.github/workflows/render-cv.yml`](../.github/workflows/render-cv.yml) workflow file.
 
+### Editing the CV (Bilingual & RenderCV Guidelines)
+
+When updating your bilingual web CV and RenderCV configuration:
+
+1. **English-First Workflow**:
+   - Always focus on editing and refining the English CV (`_data/cv.yml`) first.
+   - Wait for explicit user confirmation on the English text and layout before updating the Spanish translation (`_data/cv_es.yml`).
+
+2. **Absolute URLs for Document Links**:
+   - When linking hosted assets (e.g., certificates or project documents in `assets/pdf/`), use absolute domain URLs (e.g., `https://andresalemn.github.io/assets/pdf/robotics-gto-certificate.pdf`).
+   - Absolute URLs ensure that hyperlinks remain functional even if someone downloads and reads the CV PDF offline.
+
+3. **RenderCV & Web Template Dual-Compatibility**:
+   - In `_data/cv.yml`, use Markdown link syntax inside title fields: `name: "[Title](https://domain.com/path.pdf)"`.
+   - RenderCV automatically converts Markdown links in `name` into PDF hyperlinks.
+   - For web CV rendering (`_includes/cv/`), ensure partial includes (such as `certificates.liquid` and `projects.liquid`) apply `| markdownify | remove: '<p>' | remove: '</p>'` to `entry.name` so links render as clickable HTML `<a>` tags.
+
+4. **Official Certification Accuracy**:
+   - Cross-reference certificate data directly with official PDF/issued documents to verify exact dates (`YYYY-MM`), official issuer titles, qualification levels, and evaluated core competencies before updating bullet points.
+
+5. **Rendering CV PDFs Locally**:
+   - The user renders PDFs manually in a separate local terminal outside the agent session.
+   - Ensure RenderCV is installed (`pip install rendercv`).
+   - Use the optimized render command to suppress unnecessary auxiliary files (`.md`, `.html`, `.png`, `.typ`) and keep only the PDF:
+
+     ```bash
+     # Render English PDF:
+     rendercv render _data/cv.yml -nomd -nohtml -nopng && rm -f _data/rendercv_output/*.typ
+
+     # Render Spanish PDF:
+     rendercv render _data/cv_es.yml -nomd -nohtml -nopng && rm -f _data/rendercv_output/*.typ
+     ```
+
+   - When satisfied with the generated PDFs in `_data/rendercv_output/`, copy and rename them to overwrite the official site binaries:
+     ```bash
+     cp _data/rendercv_output/*.pdf assets/pdf/cv_english.pdf   # (or cv_spanish.pdf)
+     ```
+
 ## Modifying the user and repository information
 
 The user and repository information is defined in [\_data/repositories.yml](../_data/repositories.yml). You can add as many users and repositories as you want. Both informations are used in the `repositories` section.
