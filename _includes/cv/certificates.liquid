@@ -34,8 +34,8 @@
       {% if entry.highlights %}
         <ul class="card-text font-weight-light list-group list-group-flush mt-2" style="border: none;">
           {% for highlight in entry.highlights %}
-            <li class="list-group-item" style="padding-left: 15px; border: none; padding-top: 2px; padding-bottom: 2px;">
-              • {{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}
+            <li class="list-group-item" style="list-style-type: disc; margin-left: 1.25rem; border: none; padding: 2px 0;">
+              {{ highlight | markdownify | remove: '<p>' | remove: '</p>' }}
             </li>
           {% endfor %}
         </ul>
