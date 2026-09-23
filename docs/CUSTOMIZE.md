@@ -426,6 +426,10 @@ When updating your bilingual web CV and RenderCV configuration:
      cp _data/rendercv_output/*.pdf assets/pdf/cv_english.pdf   # (or cv_spanish.pdf)
      ```
 
+### Git Workflow & Commit Preferences
+
+For Git commit conventions, staging strategies, and commit message formatting (Conventional Commits + Scopes + Gitmojis), refer to [`.github/GIT_WORKFLOW.md`](../.github/GIT_WORKFLOW.md). Coding agents must consult this file to understand user commit preferences and offer commit suggestions only when major milestones are reached or upon explicit request.
+
 ## Modifying the user and repository information
 
 The user and repository information is defined in [\_data/repositories.yml](../_data/repositories.yml). You can add as many users and repositories as you want. Both informations are used in the `repositories` section.
