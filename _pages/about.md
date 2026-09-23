@@ -26,9 +26,9 @@ social: true # includes social icons at the bottom of the page
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm a Mechatronics Engineer working as a Robotics Software & Control Engineer at [Inbiodroid](https://inbiodroid.com), where I develop embedded software and control systems for robotic platforms. My work includes C++ firmware development on microcontrollers, torque-based joint control, real-time teleoperation using IMU sensors and inverse kinematics.
+I'm a Mechatronics Engineer working as a Robotics Systems Engineer at [Inbiodroid](https://inbiodroid.com), where I bridge embedded firmware, control theory, and industrial automation — from mechanical/electrical bring-up to real-time C++ control loops. My work includes torque-based joint control for a 20-DOF humanoid research platform, embedded firmware on Teensy and ESP32, and real-time teleoperation combining IMU-based motion capture with custom inverse-kinematics controllers.
 
-My technical background includes embedded systems, real-time control, and robotics software development using ROS 2, with additional training in industrial robot programming and systems integration on ABB, FANUC, Universal Robots, and Mitsubishi platforms.
+My technical background spans embedded systems, real-time control, and ROS 2 robotics software, alongside industrial robot programming and systems integration on ABB, FANUC, Universal Robots, and Mitsubishi platforms, plus PLC and pneumatic automation.
 
 I'm passionate about robotics R&D and particularly interested in developing intelligent robotic systems that combine embedded software, perception, motion planning, and autonomous navigation. I hold a B.S. in Mechatronics Engineering from Universidad Anáhuac Mayab and have participated in academic exchange programs in Finland and Canada.
 

@@ -4,7 +4,7 @@ design:
     size: a4
 cv:
   name: "Luis Andrés Alemán Sánchez"
-  headline: Robotics Software Engineer | Embedded Systems | R&D
+  headline: Ingeniero de Sistemas Robóticos | Firmware Embebido | Automatización Industrial
   location: León, GTO, México
   email: "andresaleman142@gmail.com"
   website: "https://andresalemn.github.io"
@@ -12,39 +12,40 @@ cv:
   sections:
     Perfil Profesional:
       - |
-        Ingeniero Mecatrónico con experiencia profesional en el desarrollo de
-        software embebido y robótico para sistemas robóticos humanoides y móviles.
-        Especializado en C/C++, ROS 2, control en tiempo real, comunicación CANopen,
-        integración de sensores y depuración de sistemas. Experiencia en desarrollo
-        de firmware para microcontroladores Teensy y ESP32, cinemática inversa,
-        automatización industrial, programación de PLC e integración eléctrica.
-        Amplia experiencia práctica en control de bajo nivel, puesta en marcha de
-        hardware, prototipado robótico e integración entre software y hardware.
-        Español nativo e inglés con dominio profesional (C1).
+        Ingeniero de sistemas robóticos integrando firmware embebido, teoría de
+        control y automatización industrial, con capacidad para trabajar de
+        extremo a extremo, desde la puesta en marcha mecánica y eléctrica hasta
+        bucles de control en C++ en tiempo real. Dos años de experiencia
+        desarrollando controladores de torque y posición, redes de actuadores
+        distribuidos mediante CAN/CANopen y sistemas robóticos basados en ROS 2,
+        además de automatización con PLC y neumática para clientes industriales.
+        Español nativo, inglés profesional (C1).
 
     Experiencia:
       - company: "Inbiodroid"
-        position: "Junior Robotics & Control Engineer"
+        position: "Ingeniero de Control y Robótica Jr."
         location: "León, Guanajuato, Mexico"
         start_date: "2024-05"
         end_date: "present"
         highlights:
-          - Desarrollé controladores de posición articular basados en torque en C++
-            para múltiples subsistemas de un robot humanoide de 20 grados de libertad,
-            logrando una precisión de posicionamiento submilimétrica (inferior a 1 mm)
-            mediante retroalimentación de encoders y algoritmos de control propios.
-          - Implementé firmware embebido en microcontroladores Teensy 4.1 e integré
-            nodos distribuidos de control de movimiento mediante el protocolo CANopen.
+          - Desarrollé controladores articulares basados en torque en C++ para una
+            [plataforma de investigación humanoide de 20 GDL](https://andresalemn.github.io/projects/pr3.html),
+            logrando una precisión de posicionamiento submilimétrica mediante
+            retroalimentación de encoders y algoritmos de control propios ejecutados
+            en tiempo real.
+          - Desarrollé e implementé firmware embebido en microcontroladores Teensy 4.1
+            y ESP32 en una red distribuida de actuadores CAN/CANopen, abarcando
+            control de movimiento en tiempo real, monitoreo de seguridad y rutinas
+            de homing automatizadas.
           - >
-            Diseñé y probé funcionalidades de teleoperación en tiempo real mediante
-            la integración de sensores IMU, cinemática inversa y comunicación basada
-            en UDP entre subsistemas robóticos.
-          - Realicé integración de sistemas, depuración, calibración y validación
-            de componentes de hardware y software robótico durante el desarrollo
-            de prototipos.
-          - Desarrollé lógica de control PLC con Siemens LOGO!, elaboré diagramas
-            eléctricos en SolidWorks Electrical y diseñé circuitos neumáticos en
-            FluidSIM para proyectos de automatización industrial.
+            Traduje investigaciones de dinámica y cinemática en controladores
+            personalizados de torque y cinemática inversa para teleoperación en
+            tiempo real, integrando captura de movimiento basada en IMU sobre una
+            capa existente de comunicación UDP.
+          - Lideré la integración, calibración y depuración de sistemas abarcando
+            hardware y software robótico, además de lógica de control PLC (Siemens
+            LOGO!) y diseño eléctrico/neumático para proyectos de automatización
+            industrial.
 
     Proyectos:
       - name: "[3-DOF DC Motor Manipulator](https://andresalemn.github.io/projects/uni-manipulator.html)"
@@ -83,30 +84,34 @@ cv:
       - label: "Programming"
         details: C, C++, Python, MATLAB
       - label: Robotics Software
-        details: ROS 2, ros2_control, RViz, TF2, URDF, MoveIt, Gazebo, CoppeliaSim, Peter Corke Robotics Toolbox
+        details: ROS 2, ros2_control, RViz, TF2, URDF, MoveIt, Gazebo, CoppeliaSim
       - label: "Embedded Systems"
-        details: Teensy, ESP32, Arduino, Raspberry Pi, Firmware Development, Real-Time Systems, CANopen, UART, SPI, I2C, UDP, Serial Communication
-      - label: "Control and Modeling"
+        details: Teensy, ESP32, Arduino, Raspberry Pi, Firmware Development, Real-Time Systems, CANopen, UART, SPI, I²C, UDP, Serial Communication
+      - label: "Actuation & Motor Control"
+        details: ZeroErr eRob, CubeMars AK Series, MyActuator RMD, CAN/CANopen
+      - label: Control & Modeling
         details: PID Control, Kinematics, Dynamics, Inverse Kinematics, System Modeling, MATLAB/Simulink
       - label: "Industrial Robotics"
         details: "ABB, FANUC, Universal Robots, Mitsubishi"
       - label: "Industrial Automation"
         details: Siemens LOGO!, CODESYS, SolidWorks Electrical, FluidSIM, Electrical Schematics, Pneumatic Systems
+      - label: "CAD & Mechanical Design"
+        details: SolidWorks
       - label: Tools
         details: Git, GitHub, Docker, Linux (Ubuntu), VS Code, PlatformIO, LaTeX
       - label: "Languages"
-        details: Spanish (Native), English (C1), Finnish (A2)
+        details: Español (Nativo), Inglés (C1), Finés (A2)
 
     Formación:
       - institution: "Universidad Anáhuac Mayab"
-        area: "Mechatronics Engineering"
+        area: "Ingeniería Mecatrónica"
         degree: "BS"
         location: "Mérida, Yucatán, Mexico"
         start_date: "2019-09"
         end_date: "2023-12"
 
       - institution: "Universidad Anáhuac Mayab"
-        area: "Cultural Management"
+        area: "Gestión Cultural"
         degree: "Diploma"
         location: "Mérida, Yucatán, Mexico"
         start_date: "2020-01"
@@ -114,17 +119,16 @@ cv:
         summary: "Completé cursos universitarios dentro del Programa de Liderazgo y Excelencia en Artes y Cultura Culmen."
 
     Certificaciones:
-      - name: "Industrial Robotics Manufacturing Systems Integrator"
-        issuer: "Ministry of Economy"
-        date: "2026-07"
+      - name: "[Integrador de Sistemas de Manufactura con Base en Robótica Industrial](https://andresalemn.github.io/assets/pdf/robotics-gto-certificate.pdf)"
+        issuer: "Secretaría de Economía del Estado de Guanajuato"
+        date: "2026-09"
         highlights:
-          - "Programación e integración de sistemas robóticos ABB, FANUC, Universal Robots y Mitsubishi."
-          - "Puesta en marcha, diagnóstico de fallas y validación de celdas robóticas."
-          - "Aplicación de procedimientos y estándares de seguridad industrial."
+          - "Certificación de competencia laboral emitida por la Secretaría de Economía de Guanajuato para la integración de robots industriales en plataformas ABB, FANUC, Universal Robots y Mitsubishi."
+          - "Abarca selección de arquitectura, análisis de riesgos de seguridad y puesta en marcha de celdas de producción."
 
     Educación Complementaria:
-      - bullet: "**Professional Development**: Cursos especializados en ROS 2, MoveIt, Robótica Moderna, Robótica Colaborativa en la Industria, Sistemas Operativos y Redes de Computadoras (Coursera, Udemy, edX). Planeación de Movimiento — Participante invitado en un curso de nivel posgrado en CIMAT (2026)."
-      - bullet: "**International Experience**: Seleccionado para participar en programas de intercambio académico en Finlandia (2017-2018) y Canadá (2022)."
+      - bullet: "**Desarrollo Profesional**: Cursos especializados en ROS 2, MoveIt, Robótica Moderna, Robótica Colaborativa en la Industria, Sistemas Operativos y Redes de Computadoras (Coursera, Udemy, edX). Planeación de Movimiento — Participante invitado en un curso de nivel posgrado en CIMAT (2026)."
+      - bullet: "**Experiencia Internacional**: Seleccionado para participar en programas de intercambio académico en Finlandia (2017-2018) y Canadá (2022)."
 
   social_networks:
     - network: LinkedIn

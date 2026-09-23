@@ -4,7 +4,7 @@ design:
     size: a4
 cv:
   name: "Luis Andrés Alemán Sánchez"
-  headline: Robotics Software Engineer | Embedded Systems | R&D
+  headline: Robotics Systems Engineer | Embedded Firmware | Industrial Automation
   location: León, GTO, México
   email: "andresaleman142@gmail.com"
   website: "https://andresalemn.github.io"
@@ -12,39 +12,36 @@ cv:
   sections:
     Summary:
       - |
-        Mechatronics Engineer with professional experience developing embedded
-        and robotics software for humanoid and mobile robotic systems.
-        Specialized in C/C++, ROS 2, real-time control, CANopen communication,
-        sensor integration, and system debugging. Experienced in firmware
-        development on Teensy and ESP32 microcontrollers, inverse kinematics,
-        industrial automation, PLC programming, and electrical integration.
-        Strong hands-on background spanning low-level control, hardware
-        bring-up, robotic prototyping, and software-hardware integration. Fluent
-        in Spanish and professionally proficient in English (C1)
+        Robotics systems engineer bridging embedded firmware, control theory,
+        and industrial automation — comfortable working end-to-end, from
+        mechanical/electrical bring-up to real-time C++ control loops. Two
+        years building torque and position controllers, CAN/CANopen distributed
+        actuator networks, and ROS 2 robotic systems, alongside PLC and
+        pneumatic automation for industrial clients. Native Spanish,
+        professional English (C1).
     Experience:
       - company: "Inbiodroid"
-        position: "Junior Robotics & Control Engineer"
+        position: "Robotics & Control Engineer Jr."
         location: "León, Guanajuato, Mexico"
         start_date: "2024-05"
         end_date: "present"
         highlights:
-          - Developed torque-based joint position controllers in C++ for
-            multiple subsystems of a 20-DOF humanoid robot, achieving
-            sub-millimeter (below 1 mm) positioning accuracy using encoder feedback
-            and custom control algorithms.
-          - Implemented embedded firmware on Teensy 4.1 microcontrollers and
-            integrated distributed motion-control nodes over the CANopen
-            protocol.
+          - Developed torque-based joint controllers in C++ for a
+            [20-DOF humanoid research platform](https://andresalemn.github.io/projects/pr3.html),
+            achieving sub-millimeter positioning accuracy via encoder feedback
+            and custom control algorithms running in real time.
+          - Built and deployed embedded firmware on Teensy 4.1 and ESP32
+            microcontrollers across a distributed CAN/CANopen actuator network,
+            covering real-time motion control, safety monitoring, and automated
+            homing routines.
           - >
-            Designed and tested real-time teleoperation functionality by
-            integrating IMU sensors, inverse kinematics, and UDP-based
-            communication between robotic subsystems.
-          - Performed system integration, debugging, calibration, and validation
-            of robotic hardware and software components during prototype
-            development.
-          - Developed PLC control logic with Siemens LOGO!, created electrical
-            schematics in SolidWorks Electrical, and designed pneumatic circuits
-            in FluidSIM for industrial automation projects.
+            Translated dynamics and kinematics research into custom torque and
+            inverse-kinematics controllers for real-time teleoperation,
+            integrating IMU-based motion capture over an existing UDP
+            communication layer.
+          - Led system integration, calibration, and debugging across robotic
+            hardware and software, plus PLC control logic (Siemens LOGO!) and
+            electrical/pneumatic design for industrial automation projects.
     Projects:
       - name: "[3-DOF DC Motor Manipulator](https://andresalemn.github.io/projects/uni-manipulator.html)"
         summary: "University Project"
@@ -78,15 +75,19 @@ cv:
       - label: "Programming"
         details: C, C++, Python, MATLAB
       - label: Robotics Software
-        details: ROS 2, ros2_control, RViz, TF2, URDF, MoveIt, Gazebo, CoppeliaSim, Peter Corke Robotics Toolbox
+        details: ROS 2, ros2_control, RViz, TF2, URDF, MoveIt, Gazebo, CoppeliaSim
       - label: "Embedded Systems"
         details: Teensy, ESP32, Arduino, Raspberry Pi, Firmware Development, Real-Time Systems, CANopen, UART, SPI, I²C, UDP, Serial Communication
+      - label: "Actuation & Motor Control"
+        details: ZeroErr eRob, CubeMars AK Series, MyActuator RMD, CAN/CANopen
       - label: Control & Modeling
         details: PID Control, Kinematics, Dynamics, Inverse Kinematics, System Modeling, MATLAB/Simulink
       - label: "Industrial Robotics"
         details: "ABB, FANUC, Universal Robots, Mitsubishi"
       - label: "Industrial Automation"
         details: Siemens LOGO!, CODESYS, SolidWorks Electrical, FluidSIM, Electrical Schematics, Pneumatic Systems
+      - label: "CAD & Mechanical Design"
+        details: SolidWorks
       - label: Tools
         details: Git, GitHub, Docker, Linux (Ubuntu), VS Code, PlatformIO, LaTeX
       - label: "Languages"
@@ -106,13 +107,12 @@ cv:
         end_date: "2023-05"
         summary: "Completed undergraduate coursework in the Culmen Leadership and Excellence in Arts & Culture Program."
     Certificates:
-      - name: "Industrial Robotics Manufacturing Systems Integrator"
-        issuer: "Ministry of Economy"
-        date: "2026-07"
+      - name: "[Industrial Robotics Manufacturing Systems Integrator](https://andresalemn.github.io/assets/pdf/robotics-gto-certificate.pdf)"
+        issuer: "Ministry of Economy of Guanajuato (Secretaría de Economía)"
+        date: "2026-09"
         highlights:
-          - "Programming and integration of ABB, FANUC, Universal Robots, and Mitsubishi robotic systems."
-          - "Commissioning, troubleshooting, and validation of robotic cells."
-          - "Application of industrial safety procedures and standards."
+          - "State-issued competency certification (Secretaría de Economía de Guanajuato) in industrial robot integration across ABB, FANUC, Universal Robots, and Mitsubishi platforms."
+          - "Covers architecture selection, safety risk analysis, and production-cell commissioning."
     Complementary Education:
       - bullet: "**Professional Development**: Specialized courses in ROS 2, MoveIt, Modern Robotics, Collaborative Robotics in Industry, Operating Systems, and Computer Networks (Coursera, Udemy, edX). Motion Planning — Invited participant in a graduate-level course at CIMAT (2026)."
       - bullet: "**International Experience**: Selected to participate in academic exchange programs in Finland (2017–2018) and Canada (2022)."
