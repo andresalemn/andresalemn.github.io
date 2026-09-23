@@ -21,6 +21,10 @@ manage_gemfile_lock() {
 }
 
 ensure_bundle_deps() {
+    if [ ! -w "/usr/local/bundle" ] 2>/dev/null; then
+        export BUNDLE_PATH="${HOME}/.bundle"
+    fi
+
     if bundle check >/dev/null 2>&1; then
         echo "Bundler dependencies already satisfied"
         return

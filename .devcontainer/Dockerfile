@@ -5,3 +5,6 @@ FROM mcr.microsoft.com/devcontainers/jekyll
 # (Yarn is already provided by the dev container features/nvm, so this system repo is unnecessary)
 # See issue #3487
 RUN rm -f /etc/apt/sources.list.d/yarn.list
+
+# Fix permission issues for non-root user 'vscode' on system gem bundle directory
+RUN mkdir -p /usr/local/bundle && chown -R vscode:vscode /usr/local/bundle
