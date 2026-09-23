@@ -13,7 +13,7 @@
           ><a href="{{ entry.url }}" target="_blank">{{ entry.name }}</a></strong
         >
       {% else %}
-        <strong>{{ entry.name }}</strong>
+        <strong>{{ entry.name | markdownify | remove: '<p>' | remove: '</p>' }}</strong>
       {% endif %}
 
       {% if entry.issuer %}

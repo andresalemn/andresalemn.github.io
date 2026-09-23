@@ -8,7 +8,7 @@
   {% for entry in entries %}
     <li class="list-group-item">
       <div class="d-flex justify-content-between align-items-baseline flex-wrap">
-        <strong>{{ entry.title | default: entry.name }}</strong>
+        <strong>{{ entry.title | default: entry.name | markdownify | remove: '<p>' | remove: '</p>' }}</strong>
         {% if entry.date %}
           <span class="text-muted" style="font-size: 0.85rem;">{{ entry.date }}</span>
         {% endif %}
