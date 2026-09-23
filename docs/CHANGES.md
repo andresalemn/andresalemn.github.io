@@ -142,6 +142,15 @@ To prevent default templates and unused files from being compiled into the final
 
 Below is the log of recent customization and setup commits:
 
+- `41dc3fd`: Updated narrative across English/Spanish CVs (`_data/cv.yml`, `_data/cv_es.yml`), bio (`_pages/about.md`), and refreshed PDF assets (`cv_english.pdf`, `cv_spanish.pdf`).
+- `6b85a56`: Added bilingual CV editing guidelines, commit workflow rules, and agent instructions in `AGENTS.md`, `CUSTOMIZE.md`, and `GIT_WORKFLOW.md`.
+- `b967692`: Parsed markdown links in certificate titles and fixed duplicate bullet points in experience and project CV renderers.
+- `1243381`: Added bilingual CV editing guidelines and local RenderCV build instructions to `CUSTOMIZE.md` and `AGENTS.md`.
+- `c674453`: Fixed markdown link parsing for award and certificate title Liquid renderers (`_includes/cv/`).
+- `fde6f2d`: Fixed devcontainer bundler permission errors and added bundle path fallbacks in Dockerfile, devcontainer.json, and `entry_point.sh`.
+- `da44918`: Added PDF extension settings to VSCode customizations in `devcontainer.json`.
+- `2353606`: Added robotics GTO certificate PDF to `assets/pdf/`.
+- `43156bc`: Updated `docs/CHANGES.md` with reference commit logs.
 - `7d6f390`: Updating projects pages (Prometheus 3.0 overhaul and 3DOF design refinements).
 - `087620c`: Adding Prettier reminder and project design preferences to `AGENTS.md`.
 - `18606c2`: Prettier formatting fixes.
