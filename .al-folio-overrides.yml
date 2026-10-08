@@ -1,10 +1,87 @@
 ---
 version: 1
 overrides:
+  _includes/cv/awards.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/awards.liquid
+    upstream_sha256: 9a8171c8499d79cfd8f10122fa5b20fb7c26ab51afcc3b44f4823e8dfa824af9
+    local_sha256: b84773ca19ef511f85e53b064d0c17b27d37f4ae4b846c0113e5a6706fc0f641
+    acknowledged_at: "2026-10-08"
+  _includes/cv/certificates.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/certificates.liquid
+    upstream_sha256: 6aa171f982e0c92f65f22941bc3fa971a40a1d7d11ce9aeee56b16e5c38082fe
+    local_sha256: d811be4b768400c6e0e426fdb4126b154c841adbae4abe9933d73af936e81528
+    acknowledged_at: "2026-10-08"
+  _includes/cv/education.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/education.liquid
+    upstream_sha256: 26b8331fcec5be5d7b56431e708fb2df108d463a5494577467f53c1dead8aa27
+    local_sha256: b8e15ec963842a33e8511bae541c309a61127d67c03a78ccb882bffb471ba329
+    acknowledged_at: "2026-10-08"
+  _includes/cv/experience.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/experience.liquid
+    upstream_sha256: 35924ec994852bc967d9d3880927ec228037a17683231b3a83fc8e585ef5fe09
+    local_sha256: 49b46b0e0b88de74d4ea24445bbe690f29c0388e23e6a1f6473e46602c03a3c4
+    acknowledged_at: "2026-10-08"
+  _includes/cv/interests.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/interests.liquid
+    upstream_sha256: 1f7cd8b30ba132a8002885a52ce0cb467b1c4bf4a48df624f40da730ae2323fa
+    local_sha256: 6e6f4e88c0574b631130596ec666e08cf8e971594b39ec8055db2adf1f3e3995
+    acknowledged_at: "2026-10-08"
+  _includes/cv/languages.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/languages.liquid
+    upstream_sha256: 741d326a95804785f000affd120258c47cb226dc4aa4e708c8677e570e6205aa
+    local_sha256: 7708facf4b00b6851b6b288243a2d7d0dd71b10ba7a6b8edd09a8d3519a20b91
+    acknowledged_at: "2026-10-08"
+  _includes/cv/projects.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/projects.liquid
+    upstream_sha256: 4a9a33b8b402d75e0afa9c966979f11274d95cff9f6e605642f8fd6e56e8922d
+    local_sha256: 4c7d46ec6efc762a6666c4909c35736407989219bae62d622de7d4e0f2547825
+    acknowledged_at: "2026-10-08"
+  _includes/cv/publications.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/publications.liquid
+    upstream_sha256: "0380b847b696092ae11e74ee3ca21216663c61c359a1ce7200543751ebe8928f"
+    local_sha256: fdb1e9d7386fe6bc926864c63f46f7db9cb63e0f63e70339d6648b1a3c4fafd5
+    acknowledged_at: "2026-10-08"
+  _includes/cv/references.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/references.liquid
+    upstream_sha256: 2cac6f7192d85b122f13a551e3a97f116ad9c25ba369e5f63787250d3466ddfd
+    local_sha256: 0d6b84f7aff016b7ff11519dcfd8780be42cd662cdae1079375395beaf017a1e
+    acknowledged_at: "2026-10-08"
   _includes/cv/render.liquid:
     owner: al_folio_cv
     gem_version: 1.0.0
     upstream_path: templates/cv/render.liquid
     upstream_sha256: 89c9ce23250ace91325d69ae0b8fab67ecc31466de1f09f91958c745e98a2324
-    local_sha256: a63dd4a65e0e4c9fa0fef8e45be3f1f9aa1eef814af1da702c713d215d76222c
-    acknowledged_at: "2026-07-12"
+    local_sha256: 25b3080b5602bcd3419f3dd6ddcb03dfb4019fdca2fa977c411d870cd2527453
+    acknowledged_at: "2026-10-08"
+  _includes/cv/skills.liquid:
+    owner: al_folio_cv
+    gem_version: 1.0.0
+    upstream_path: templates/cv/skills.liquid
+    upstream_sha256: f5d19117eadb2e5e0bad2563bcfaa8c8bda33c7ff2aefc50b5cab9417d29d3c8
+    local_sha256: f390cf5488f93f6a059b7bf63a7b397b737ccf1aa55387c84e40180f187a8e46
+    acknowledged_at: "2026-10-08"
+  _includes/footer.liquid:
+    owner: al_folio_core
+    gem_version: 1.0.11
+    upstream_path: _includes/footer.liquid
+    upstream_sha256: 65219faad5445eb4456649d77921acd07845875bbcad4fb8f33b12b3d52d96d2
+    local_sha256: f3bf42c08cb8375bf88ee6f55c61b65670de9ebba18a821626c50cf5af657d96
+    acknowledged_at: "2026-10-08"
