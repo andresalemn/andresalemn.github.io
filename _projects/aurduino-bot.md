@@ -18,7 +18,7 @@ repo: andresalemn/arduino-bot
 
 {% if page.repo %}
 
-<div class="repositories d-flex justify-content-center">
-  {% include repository/repo.liquid repository=page.repo %}
+<div class="repositories w-100 my-4">
+  {% include repository/repo_wide.liquid repository=page.repo %}
 </div>
 {% endif %}

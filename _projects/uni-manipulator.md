@@ -16,8 +16,8 @@ An end-to-end mechatronic system featuring a 3-Degree-of-Freedom (3-DOF) robotic
 
 {% if page.repo %}
 
-<div class="repositories d-flex justify-content-center my-4">
-  {% include repository/repo.liquid repository=page.repo %}
+<div class="repositories w-100 my-4">
+  {% include repository/repo_wide.liquid repository=page.repo %}
 </div>
 {% endif %}
 
