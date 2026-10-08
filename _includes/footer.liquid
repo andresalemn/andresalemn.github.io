@@ -1,0 +1,29 @@
+{% if site.footer_fixed %}
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      &copy; Copyright {{ 'now' | date: '%Y' }} Andrés Alemán. {{ site.footer_text }}
+      {% if site.impressum_path %}
+        <a href="{{ site.impressum_path | relative_url }}">Impressum</a>.
+      {% endif %}
+      {% if site.last_updated %}
+        Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+      {% endif %}
+    </div>
+  </footer>
+{% else %}
+  <footer class="sticky-bottom mt-5" role="contentinfo">
+    {% if site.newsletter and site.newsletter.enabled %}
+      {% include newsletter.liquid %}
+    {% endif %}
+
+    <div class="container">
+      &copy; Copyright {{ 'now' | date: '%Y' }} Andrés Alemán. {{ site.footer_text }}
+      {% if site.impressum_path %}
+        <a href="{{ site.impressum_path | relative_url }}">Impressum</a>.
+      {% endif %}
+      {% if site.last_updated %}
+        Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+      {% endif %}
+    </div>
+  </footer>
+{% endif %}
