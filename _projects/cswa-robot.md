@@ -62,6 +62,174 @@ During the modeling of this 17-lesson robotic master assembly, fundamental CSWA 
 3. **Mates, Interference & Kinematics:** Combined standard, advanced, and mechanical mates to simulate realistic motion ranges, verifying physical clearances via interference detection.
 4. **2D Engineering & BOM Integration:** Generated ISO/ANSI drawing layouts with section views, exploded assembly steps, magnetic balloon callouts, and automated Bills of Materials (BOM).
 
+---
+
+## 📜 2D Engineering Drawings & Blueprint Suite
+
+Explore the 8-sheet engineering drawing package below, featuring master assembly BOMs, section views, sub-assemblies, and detailed dimensioning.
+
+<!-- Scoped Minimal Styles for Carousel without breaking global site dark theme -->
+<style>
+  #cswaDrawingsCarousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  #cswaDrawingsCarousel .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  #cswaDrawingsCarousel .carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+  }
+  #cswaDrawingsCarousel .carousel-item.active,
+  #cswaDrawingsCarousel .carousel-item-next,
+  #cswaDrawingsCarousel .carousel-item-prev {
+    display: block;
+  }
+  #cswaDrawingsCarousel .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    gap: 6px;
+  }
+  #cswaDrawingsCarousel .carousel-indicators button {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 4px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #222;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 0.4;
+    transition: opacity 0.6s ease;
+  }
+  #cswaDrawingsCarousel .carousel-indicators button.active {
+    background-color: #000;
+    opacity: 0.9;
+  }
+  #cswaDrawingsCarousel .carousel-control-prev,
+  #cswaDrawingsCarousel .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12%;
+    padding: 0;
+    background: transparent;
+    border: none;
+    opacity: 1;
+    transition: background 0.2s ease;
+  }
+  #cswaDrawingsCarousel .carousel-control-prev { left: 0; }
+  #cswaDrawingsCarousel .carousel-control-next { right: 0; }
+  
+  #cswaDrawingsCarousel .carousel-control-prev:hover,
+  #cswaDrawingsCarousel .carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.08);
+    opacity: 1;
+  }
+  
+  #cswaDrawingsCarousel .carousel-control-prev-icon,
+  #cswaDrawingsCarousel .carousel-control-next-icon {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+  }
+  #cswaDrawingsCarousel .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  }
+  #cswaDrawingsCarousel .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<div id="cswaDrawingsCarousel" class="carousel slide my-4 rounded overflow-hidden shadow-lg" data-bs-ride="carousel" data-bs-interval="4500">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+    <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+  </div>
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_1.png" class="d-block w-100 img-fluid" alt="Sheet 1 - Master Assembly & BOM">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_2.png" class="d-block w-100 img-fluid" alt="Sheet 2 - Sub-Assembly Details">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_3.png" class="d-block w-100 img-fluid" alt="Sheet 3 - Link Mechanism">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_4.png" class="d-block w-100 img-fluid" alt="Sheet 4 - Joint Assembly">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_5.png" class="d-block w-100 img-fluid" alt="Sheet 5 - Base Frame Details">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_6.png" class="d-block w-100 img-fluid" alt="Sheet 6 - Gripper Assembly">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_7.png" class="d-block w-100 img-fluid" alt="Sheet 7 - Component Dimensioning">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_8.png" class="d-block w-100 img-fluid" alt="Sheet 8 - Exploded Assembly & Callouts">
+    </div>
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
+<div class="text-center my-3">
+  <a href="{{ site.baseurl }}/assets/pdf/Robot_CSWA.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">
+    <i class="fa-solid fa-file-pdf me-2"></i> View Full Vector PDF (8 Sheets)
+  </a>
+</div>
+
 <div class="p-3 my-4 rounded" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);">
   <h5 class="mb-3" style="font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--global-theme-color);">Key Design & Modeling Highlights</h5>
   <ul class="mb-0 pl-4" style="line-height: 1.8;">
