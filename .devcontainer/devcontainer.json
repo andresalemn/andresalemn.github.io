@@ -15,8 +15,8 @@
     "ghcr.io/devcontainers-extra/features/prettier:1.0.2": {}
   },
 
-  // Automatically ensure bundle directory ownership on container setup
-  "postCreateCommand": "sudo chown -R vscode:vscode /usr/local/bundle",
+  // Automatically ensure bundle directory ownership on container setup and install locked npm deps
+  "postCreateCommand": "sudo chown -R vscode:vscode /usr/local/bundle && npm ci",
 
   // Optionally: run jekyll serve automatically on container entering using the Docker entrypoint
   "postAttachCommand": "./bin/entry_point.sh",
