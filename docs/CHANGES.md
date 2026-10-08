@@ -66,16 +66,23 @@ To prevent default templates and unused files from being compiled into the final
 
 ### Projects Page (Custom Projects Grid)
 
-- **Files**: `_pages/projects.md`, `_projects/`
+- **Files**: `_pages/projects.md`, `_projects/cswa-robot.md`, `_projects/`
 - **Changes**:
   - Cleaned up and deleted default template projects (`2_project.md`, `3_project.md`, `5_project.md`, `6_project.md`, `7_project.md`, `8_project.md`, `9_project.md`).
-  - Added/Renamed personal projects: `uni-manipulator.md` (renamed from `4_project.md`), `arduino-bot.md`, and `pr3.md`.
-  - Added project cover images to `assets/img/`.
+  - Added personal project categories: `robotics` and `CAD` in `_pages/projects.md`.
+  - Created `cswa-robot.md` project page featuring an interactive on-demand 3D eDrawings HTML viewer, centered shields.io badges with logos, instructor attribution (Adan Isais / `adnisais`), and parametric modeling highlights.
+  - Added an 8-sheet 2D engineering drawing Bootstrap carousel with autoplay, custom dark overlay arrow controls, indicator dots, and a vector PDF viewer link.
+  - Added project cover images to `assets/img/cswa-robot/` and drawing sheets to `assets/img/cswa-robot/drawings/`.
 
-### Footer Text
+### Footer Position & Styling
 
 - **File**: `_config.yml`
-- **Change**: Removed the "Photos from Unsplash" attribution from the `footer_text` field.
+- **Change**: Set `footer_fixed: false` to un-pin the footer from the screen bottom, allowing it to sit naturally at the end of the page content when scrolling. Removed the "Photos from Unsplash" attribution from `footer_text`.
+
+### Wide Repository Card Template (`_includes/repository/repo_wide.liquid`)
+
+- **Files**: `_includes/repository/repo_wide.liquid`, `_projects/uni-manipulator.md`
+- **Change**: Created `repo_wide.liquid` partial template to render full-width (800px) repository cards via the custom Vercel `github-stats-extended` service. Added explicit dark/light mode CSS rules (`html[data-theme='...']`) to ensure only the matching theme card is displayed. Updated `uni-manipulator.md` to use this layout.
 
 ---
 
@@ -142,6 +149,12 @@ To prevent default templates and unused files from being compiled into the final
 
 Below is the log of recent customization and setup commits:
 
+- `a46d72c`: feat(projects): 🎨 update repository display to use wide card layout for ArduinoBot and 3DOF Manipulator.
+- `a42b504`: feat(repo-card): 🎨 add wide repository card with dynamic GitHub stats.
+- `ce885f3`: feat(config): 🛠️ disable footer fixed position in site configuration.
+- `bb8237e`: feat(cswa-robot): 📄 add 2D engineering drawings and PDF for CSWA robot project.
+- `9b67c14`: feat(projects): 🎨 add CAD category and SolidWorks CSWA robot project.
+- `a1fa486`: docs: 📝 update .prettierignore to include added HTML files.
 - `41dc3fd`: Updated narrative across English/Spanish CVs (`_data/cv.yml`, `_data/cv_es.yml`), bio (`_pages/about.md`), and refreshed PDF assets (`cv_english.pdf`, `cv_spanish.pdf`).
 - `6b85a56`: Added bilingual CV editing guidelines, commit workflow rules, and agent instructions in `AGENTS.md`, `CUSTOMIZE.md`, and `GIT_WORKFLOW.md`.
 - `b967692`: Parsed markdown links in certificate titles and fixed duplicate bullet points in experience and project CV renderers.
