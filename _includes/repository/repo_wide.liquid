@@ -1,0 +1,46 @@
+{% assign repo_parts = include.repository | split: '/' %}
+{% assign user_name = repo_parts[0] %}
+{% assign repo_name = repo_parts[1] %}
+
+{% capture repo_url %}https://github.com/{{ user_name }}/{{ repo_name }}{% endcapture %}
+
+{% capture stats_base_url %}{% if site.external_services.github_readme_stats_url %}{{ site.external_services.github_readme_stats_url }}{% else %}https://github-readme-stats.vercel.app/{% endif %}{% endcapture %}
+
+{% capture stats_light_url %}{{ stats_base_url }}api/pin/?username={{ user_name }}&repo={{ repo_name }}&theme={{ site.repo_theme_light }}&card_width=800{% endcapture %}
+{% capture stats_dark_url %}{{ stats_base_url }}api/pin/?username={{ user_name }}&repo={{ repo_name }}&theme={{ site.repo_theme_dark }}&card_width=800{% endcapture %}
+
+<div class="repo-card-wide my-4 w-100 text-center">
+  <a href="{{ repo_url }}" target="_blank" rel="noopener noreferrer" class="d-block w-100">
+    <img
+      class="repo-img-light w-100"
+      src="{{ stats_light_url }}"
+      alt="{{ include.repository }}"
+      style="max-width: 100%; height: auto;"
+    >
+    <img
+      class="repo-img-dark w-100"
+      src="{{ stats_dark_url }}"
+      alt="{{ include.repository }}"
+      style="max-width: 100%; height: auto;"
+    >
+  </a>
+</div>
+
+<style>
+  html[data-theme='dark'] .repo-card-wide .repo-img-light {
+    display: none !important;
+  }
+  html[data-theme='dark'] .repo-card-wide .repo-img-dark {
+    display: block !important;
+  }
+  html[data-theme='light'] .repo-card-wide .repo-img-light {
+    display: block !important;
+  }
+  html[data-theme='light'] .repo-card-wide .repo-img-dark {
+    display: none !important;
+  }
+  /* Fallback if data-theme is not yet initialized */
+  :root:not([data-theme]) .repo-card-wide .repo-img-dark {
+    display: none;
+  }
+</style>
