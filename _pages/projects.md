@@ -5,7 +5,7 @@ permalink: /projects/
 description: From Mathematical Modeling to Real-Time Implementation.
 nav: true
 nav_order: 1
-display_categories: [robotics]
+display_categories: [robotics, CAD]
 horizontal: false
 ---
 
