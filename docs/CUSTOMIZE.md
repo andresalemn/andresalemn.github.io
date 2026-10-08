@@ -1603,13 +1603,16 @@ GitHub restricts the default `GITHUB_TOKEN` from triggering other workflows when
 
 1. **Accept / Acknowledge the Override:**
    Inside your project workspace container, run the CLI command to automatically record and acknowledge all local file overrides:
+
    ```bash
    bundle exec al-folio upgrade overrides accept --all
    ```
-   *(Or for a specific file: `bundle exec al-folio upgrade overrides accept _includes/footer.liquid`)*
+
+   _(Or for a specific file: `bundle exec al-folio upgrade overrides accept _includes/footer.liquid`)_
 
 2. **Verify with the Audit Command:**
    Run the audit command to ensure all overrides show as `acknowledged`:
+
    ```bash
    bundle exec al-folio upgrade overrides audit
    ```
@@ -1620,4 +1623,3 @@ GitHub restricts the default `GITHUB_TOKEN` from triggering other workflows when
    git add .al-folio-overrides.yml _includes/footer.liquid
    git commit -m "feat(override): 🛠️ add and acknowledge footer override"
    ```
-
