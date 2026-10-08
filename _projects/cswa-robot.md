@@ -188,7 +188,7 @@ Explore the 8-sheet engineering drawing package below, featuring master assembly
     <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
     <button type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
   </div>
-  
+
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_1.png" class="d-block w-100 img-fluid" alt="Sheet 1 - Master Assembly & BOM">
@@ -215,7 +215,7 @@ Explore the 8-sheet engineering drawing package below, featuring master assembly
       <img src="{{ site.baseurl }}/assets/img/cswa-robot/drawings/Robot_CSWA_8.png" class="d-block w-100 img-fluid" alt="Sheet 8 - Exploded Assembly & Callouts">
     </div>
   </div>
-  
+
   <button class="carousel-control-prev" type="button" data-bs-target="#cswaDrawingsCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
   </button>
