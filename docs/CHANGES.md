@@ -74,10 +74,13 @@ To prevent default templates and unused files from being compiled into the final
   - Added an 8-sheet 2D engineering drawing Bootstrap carousel with autoplay, custom dark overlay arrow controls, indicator dots, and a vector PDF viewer link.
   - Added project cover images to `assets/img/cswa-robot/` and drawing sheets to `assets/img/cswa-robot/drawings/`.
 
-### Footer Position & Styling
+### Footer Position, Styling & Override
 
-- **File**: `_config.yml`
-- **Change**: Set `footer_fixed: false` to un-pin the footer from the screen bottom, allowing it to sit naturally at the end of the page content when scrolling. Removed the "Photos from Unsplash" attribution from `footer_text`.
+- **Files**: `_config.yml`, `_includes/footer.liquid`, `.al-folio-overrides.yml`
+- **Changes**:
+  - Set `footer_fixed: false` in `_config.yml` to un-pin the footer from the screen bottom, allowing it to sit naturally at the end of the page content when scrolling.
+  - Created local override `_includes/footer.liquid` to customize the copyright text to display **Andrés Alemán** instead of the full name.
+  - Tracked `_includes/footer.liquid` in `.al-folio-overrides.yml` for upgrade audit compliance.
 
 ### Wide Repository Card Template (`_includes/repository/repo_wide.liquid`)
 
@@ -138,6 +141,11 @@ To prevent default templates and unused files from being compiled into the final
   - `_includes/cv/interests.liquid` — renders name and keywords.
   - `_includes/cv/references.liquid` — renders name, icon, reference text.
 
+### Documentation & Override Guidelines
+
+- **File**: `docs/CUSTOMIZE.md`
+- **Change**: Added a dedicated section (`Managing Plugin File Overrides & Upgrade Audits`) detailing post-override CLI steps (`bundle exec al-folio upgrade overrides accept --all` and `audit`) and manifest commit instructions.
+
 ### Style Contract Lint Adjustment (`test/style_contract.js`)
 
 - **File**: `test/style_contract.js`
@@ -149,6 +157,11 @@ To prevent default templates and unused files from being compiled into the final
 
 Below is the log of recent customization and setup commits:
 
+- `d42539a`: docs(customize): 📖 add plugin override acceptance guidelines and workflow steps.
+- `0fe998e`: chore(overrides): 📝 accept and acknowledge local plugin file overrides.
+- `710f019`: feat(footer): 🎨 customize footer copyright to display Andrés Alemán.
+- `2555a48`: feat(config): 🛠️ changed the footer text.
+- `5eee2cd`: docs: 📝 update CHANGES.md with recent customization and setup commit logs.
 - `a46d72c`: feat(projects): 🎨 update repository display to use wide card layout for ArduinoBot and 3DOF Manipulator.
 - `a42b504`: feat(repo-card): 🎨 add wide repository card with dynamic GitHub stats.
 - `ce885f3`: feat(config): 🛠️ disable footer fixed position in site configuration.
