@@ -91,6 +91,8 @@ Here we will give you some tips on how to customize the website. One important t
     - [How it integrates with analytics](#how-it-integrates-with-analytics)
     - [For developers](#for-developers)
   - [Setting up a Personal Access Token (PAT) for Google Scholar Citation Updates](#setting-up-a-personal-access-token-pat-for-google-scholar-citation-updates)
+  - [Managing Plugin File Overrides & Upgrade Audits](#managing-plugin-file-overrides--upgrade-audits)
+    - [Steps to Follow After Creating or Editing an Override](#steps-to-follow-after-creating-or-editing-an-override)
     - [Why is a PAT required?](#why-is-a-pat-required)
     - [How to set up the PAT](#how-to-set-up-the-pat)
 
@@ -1589,3 +1591,33 @@ GitHub restricts the default `GITHUB_TOKEN` from triggering other workflows when
 
 3. **Workflow usage**
    The workflow `.github/workflows/update-citations.yml` uses this PAT to commit updates to `_data/citations.yml`.
+
+---
+
+## Managing Plugin File Overrides & Upgrade Audits
+
+> [!IMPORTANT]
+> If you override any plugin-owned template files (such as files in `_includes/` like `_includes/footer.liquid` or `_includes/cv/`), you must acknowledge these overrides in `.al-folio-overrides.yml` to keep local builds and CI checks passing cleanly.
+
+### Steps to Follow After Creating or Editing an Override:
+
+1. **Accept / Acknowledge the Override:**
+   Inside your project workspace container, run the CLI command to automatically record and acknowledge all local file overrides:
+   ```bash
+   bundle exec al-folio upgrade overrides accept --all
+   ```
+   *(Or for a specific file: `bundle exec al-folio upgrade overrides accept _includes/footer.liquid`)*
+
+2. **Verify with the Audit Command:**
+   Run the audit command to ensure all overrides show as `acknowledged`:
+   ```bash
+   bundle exec al-folio upgrade overrides audit
+   ```
+
+3. **Commit the Tracking Manifest:**
+   Always commit `.al-folio-overrides.yml` alongside your modified files:
+   ```bash
+   git add .al-folio-overrides.yml _includes/footer.liquid
+   git commit -m "feat(override): 🛠️ add and acknowledge footer override"
+   ```
+
